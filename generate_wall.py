@@ -28,11 +28,11 @@ FONT = 'font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,\
 PALETTE = ["#ebedf0","#c6dbef","#9ecae1","#6baed6","#3182bd","#08519c"]
 
 def bucket_color(h: float) -> str:
-    if h <= 0: return PALETTE[0]
-    if h <= 2: return PALETTE[1]
-    if h <= 4: return PALETTE[2]
-    if h <= 6: return PALETTE[3]
-    if h <= 8: return PALETTE[4]
+    if h <= 2: return PALETTE[0]
+    if h <= 4: return PALETTE[1]
+    if h <= 6: return PALETTE[2]
+    if h <= 8: return PALETTE[3]
+    if h <= 10: return PALETTE[4]
     return PALETTE[5]
 
 def load_hours(path: str) -> dict:
@@ -106,7 +106,7 @@ def render_svg(hours_map: dict):
 
     # 星期标签（Mon / Wed / Fri）
     if SHOW_WEEKDAY_LABELS:
-        weekdays = {0: "Mon", 2: "Wed", 4: "Fri"}  # Mon=0
+        weekdays = {0: "Mon", 2: "Wed", 4: "Fri", 6: "Sun"}  # Mon=0
         for r, name in weekdays.items():
             y = PADDING_TOP + r * (CELL + GAP) + 8
             parts.append(f'<text x="4" y="{y}" font-size="10" {FONT}>{name}</text>')
