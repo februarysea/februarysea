@@ -1,4 +1,5 @@
 name: Update Work Wall
+
 on:
   schedule:
     - cron: "0 16 * * *" 
