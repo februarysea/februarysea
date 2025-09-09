@@ -121,7 +121,7 @@ def render_svg(hours_map: dict):
             )
         legend_text = (
             f'<text x="{legend_x + len(PALETTE)*(CELL+4) + 5}" y="{legend_y+9}" font-size="10" {FONT}>'
-            f'0, 0–2, 2–4, 4–6, 6–8, >8 h</text>'
+            f'0-2, 2–4, 4–6, 6–8, 8-10, >10 h</text>'
         )
         parts.append(legend_text)
 
