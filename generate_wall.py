@@ -28,11 +28,11 @@ FONT = 'font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,\
 PALETTE = ["#ebedf0","#c6dbef","#9ecae1","#6baed6","#3182bd","#08519c"]
 
 def bucket_color(h: float) -> str:
-    if h <= 2: return PALETTE[0]
-    if h <= 4: return PALETTE[1]
-    if h <= 6: return PALETTE[2]
-    if h <= 8: return PALETTE[3]
-    if h <= 10: return PALETTE[4]
+    if h <= 0: return PALETTE[0]     # 0h -> 灰色
+    if h <= 2: return PALETTE[1]
+    if h <= 4: return PALETTE[2]
+    if h <= 6: return PALETTE[3]
+    if h <= 8: return PALETTE[4]
     return PALETTE[5]
 
 def load_hours(path: str) -> dict:
@@ -121,7 +121,7 @@ def render_svg(hours_map: dict):
             )
         legend_text = (
             f'<text x="{legend_x + len(PALETTE)*(CELL+4) + 5}" y="{legend_y+9}" font-size="10" {FONT}>'
-            f'0-2, 2–4, 4–6, 6–8, 8-10, >10 h</text>'
+            f'0, 0–2, 2–4, 4–6, 6–8, >8 h</text>'
         )
         parts.append(legend_text)
 
