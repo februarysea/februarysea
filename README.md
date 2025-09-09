@@ -29,16 +29,14 @@
 </p>
 
 ---
+## 🧱 Work Hours Wall
+![Work Hours](./work-stats.svg)
 
-## 🚀 Featured Projects
-- **MobilityAgentSociety** — LLM-driven multi-agent simulation for urban mobility  
-- **TrajSceneLLM** — Narrative-driven synthetic trajectory generation  
-- **DailyMobility Benchmark** — Evaluation suite for activity/travel generation  
-- **UMEP Lab Website** — Astro + Tailwind (🔗 umep-lab.github.io)
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:330867,100:30CFD0&height=120&section=footer"/>
+</p>
 
 ---
-
-
 ## 🐍 Contribution Snake
 <p align="center">
   <picture>
@@ -46,12 +44,3 @@
     <img src="https://raw.githubusercontent.com/februarysea/februarysea/output/github-contribution-grid-snake.svg" alt="snake animation">
   </picture>
 </p>
-
----
-### My Work Hours Wall
-![Work Hours](./work-stats.svg)
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:330867,100:30CFD0&height=120&section=footer"/>
-</p>
-
