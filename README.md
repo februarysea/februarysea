@@ -32,10 +32,6 @@
 ## 🧱 Work Hours Wall
 ![Work Hours](./work-stats.svg)
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:330867,100:30CFD0&height=120&section=footer"/>
-</p>
-
 ---
 ## 🐍 Contribution Snake
 <p align="center">
@@ -43,4 +39,8 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/februarysea/februarysea/output/github-contribution-grid-snake-dark.svg">
     <img src="https://raw.githubusercontent.com/februarysea/februarysea/output/github-contribution-grid-snake.svg" alt="snake animation">
   </picture>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:330867,100:30CFD0&height=120&section=footer"/>
 </p>
