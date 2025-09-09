@@ -8,8 +8,6 @@
   <a href="https://git.io/typing-svg">
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=30CFD0&center=true&vCenter=true&width=720&lines=PhD+Student+@+HKUST(GZ);Research+Interests%3A;LLM-driven+Multi-Agent+Mobility+Simulation;Human+Trajectory+Analysis;Urban+AI+%26+Environmental+Perception" alt="Typing SVG" /></p>
 
----
-
 ## 🔬 About Me
   
 <p align="center">
@@ -18,7 +16,6 @@
   <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> ·
 </p>
 
----
 
 ## 🛠️ Tech Stack
 <p align="center">
@@ -51,7 +48,10 @@
 </p>
 
 ---
+### My Work Hours Wall
+![Work Hours](./work-stats.svg)
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:330867,100:30CFD0&height=120&section=footer"/>
 </p>
+
