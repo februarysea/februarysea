@@ -9,17 +9,17 @@ SVG_PATH  = "work-stats.svg"
 
 WEEKS = 53
 ROWS  = 7
-CELL  = 11      # GitHub 更接近 11px
+CELL  = 11      # 与 GitHub 更接近
 GAP   = 2
 
-# 让左边和 GitHub 贡献墙更贴近（它的方格左边几乎贴边）
-PADDING_LEFT  = 16
+# 留白（含左侧星期标签空间）
+PADDING_LEFT  = 34
 PADDING_TOP   = 34     # 给月份标签留空间
 LEGEND_HEIGHT = 40
 
 # 显示控制
-SHOW_TITLES          = False    # 不在 SVG 里画标题（避免和 README 标题重叠）
-SHOW_WEEKDAY_LABELS  = True    # 去掉 Mon/Wed/Fri 文字以便左对齐
+SHOW_TITLES          = False   # 不在 SVG 里画标题（避免与 README 冲突）
+SHOW_WEEKDAY_LABELS  = True    # 显示 Mon/Wed/Fri
 SHOW_LEGEND          = True
 
 FONT = 'font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,\'Noto Sans\',sans-serif"'
@@ -60,7 +60,6 @@ def render_svg(hours_map: dict):
     today = dt.date.today()
     start, end = start_sunday(today)
 
-    # 先算画布大小（不含标题；星期标签已去掉）
     width  = PADDING_LEFT + WEEKS * (CELL + GAP) + 8
     height = PADDING_TOP  + ROWS  * (CELL + GAP) + (LEGEND_HEIGHT if SHOW_LEGEND else 8)
 
@@ -68,13 +67,13 @@ def render_svg(hours_map: dict):
              f'xmlns="http://www.w3.org/2000/svg" role="img" '
              f'preserveAspectRatio="xMinYMin meet">']
 
-    # （可选）标题：默认关闭，避免和 README 标题挤在一起
+    # （可选）标题：默认关闭
     if SHOW_TITLES:
         now_utc = dt.datetime.utcnow(); bj = now_utc + dt.timedelta(hours=8)
         parts.append(f'<text x="0" y="16" font-size="15" font-weight="bold" {FONT}>My Work Hours Wall</text>')
-        parts.append(f'<text x="0" y="30" font-size="12" {FONT}>Daily Work Hours · Updated (Beijing): {bj.date()}</text>')
+        parts.append(f'<text x="0" y="30" font-size="12" {FONT}>Updated (Beijing): {bj.date()}</text>')
 
-    # 月份标签：仅在月份变化且与上次标注间隔≥3列时标注，避免拥挤
+    # 月份标签：仅在月份变化且与上次标注列距≥3时标注，避免拥挤
     month_labels, last_col = [], -999
     d = start; prev_month = None
     for c in range(WEEKS):
@@ -105,12 +104,12 @@ def render_svg(hours_map: dict):
             )
         d += dt.timedelta(days=7); col += 1
 
-    # 星期标签（默认关闭，以便左边与上方日历对齐）
+    # 星期标签（Mon / Wed / Fri）
     if SHOW_WEEKDAY_LABELS:
-        weekdays = {0: "Mon", 2: "Wed", 4: "Fri"}
+        weekdays = {0: "Mon", 2: "Wed", 4: "Fri"}  # Mon=0
         for r, name in weekdays.items():
             y = PADDING_TOP + r * (CELL + GAP) + 8
-            parts.append(f'<text x="0" y="{y}" font-size="10" {FONT}>{name}</text>')
+            parts.append(f'<text x="4" y="{y}" font-size="10" {FONT}>{name}</text>')
 
     # 图例
     if SHOW_LEGEND:
@@ -120,5 +119,20 @@ def render_svg(hours_map: dict):
             parts.append(
                 f'<rect x="{legend_x + i*(CELL+4)}" y="{legend_y}" width="{CELL}" height="{CELL}" rx="2" ry="2" fill="{col_hex}"/>'
             )
-        parts.append(
-            f'<text x="{legend_x + len(PALETTE)*(CELL+4) +
+        legend_text = (
+            f'<text x="{legend_x + len(PALETTE)*(CELL+4) + 5}" y="{legend_y+9}" font-size="10" {FONT}>'
+            f'0, 0–2, 2–4, 4–6, 6–8, >8 h</text>'
+        )
+        parts.append(legend_text)
+
+    parts.append('</svg>')
+
+    with open(SVG_PATH, "w", encoding="utf-8") as f:
+        f.write("".join(parts))
+
+def main():
+    hours_map = load_hours(DATA_PATH)
+    render_svg(hours_map)
+
+if __name__ == "__main__":
+    main()
