@@ -2,13 +2,20 @@ name: Generate contribution snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"     # 每12小时更新一次
+    - cron: "0 */12 * * *"   # 每12小时
   workflow_dispatch:
+
+# 关键：给 GITHUB_TOKEN 写入权限
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      # 可选，但建议：确保有仓库上下文
+      - uses: actions/checkout@v4
+
       - name: Generate snake SVG
         uses: Platane/snk@v3
         with:
