@@ -6,15 +6,11 @@
 <!-- 打字机效果 -->
 <p align="center">
   <a href="https://git.io/typing-svg">
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=30CFD0&center=true&vCenter=true&width=720&lines=PhD+Student+@+HKUST(GZ);LLM-driven+Multi-Agent+Mobility+Simulation;Human+Trajectory+Analysis;Urban+AI+%26+Environmental+Perception" alt="Typing SVG" />  </a>
-</p>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=30CFD0&center=true&vCenter=true&width=720&lines=PhD+Student+@+HKUST(GZ);Research+Interests%3A;LLM-driven+Multi-Agent+Mobility+Simulation;Human+Trajectory+Analysis;Urban+AI+%26+Environmental+Perception" alt="Typing SVG" /></p>
 
 ---
 
 ## 🔬 About Me
-- 🎓 PhD Student @ **HKUST(GZ)** (UGOD)
-- 🧭 Research: **LLM-driven multi-agent mobility simulation**, **human trajectory analysis**
-
   
 <p align="center">
   <a href="https://umep-lab.github.io">Website</a> ·
