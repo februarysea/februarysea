@@ -15,7 +15,6 @@
 <!-- Languages -->
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
-  <img alt="Java" src="https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white"/>
   <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/>
   <img alt="Hugging Face" src="https://img.shields.io/badge/HuggingFace-FCC72C?style=flat&logo=huggingface&logoColor=black"/>
   <img alt="vLLM" src="https://img.shields.io/badge/vLLM-4A90E2?style=flat&logo=openai&logoColor=white"/>
