@@ -12,8 +12,6 @@
 
 ## 🛠️ Tech Stack
 
-## 🛠️ Tech Stack
-
 <!-- Languages -->
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
@@ -40,6 +38,14 @@
   <img alt="LaTeX" src="https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white"/>
   <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white"/>
 
+</p>
+
+## 📬 Contact Me
+
+<p align="center">
+  <a href="mailto:cji201@connect.hkust-gz.edu.cn">
+    <img alt="Email" src="https://img.shields.io/badge/Email-30CFD0?style=flat&logo=gmail&logoColor=white" />
+  </a>
 </p>
 
 
