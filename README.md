@@ -48,8 +48,8 @@
 </p>
 
 
-## 🧱 Work Hours Wall
-![Work Hours](./work-stats.svg)
+<!-- ## 🧱 Work Hours Wall -->
+<!-- [Work Hours](./work-stats.svg) -->
 
 ## 🐍 Contribution Snake
 <p align="center">
