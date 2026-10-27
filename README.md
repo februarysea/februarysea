@@ -21,5 +21,5 @@ Cognitive mapping in human mobility and urban cognition
 <p><samp>
 <a href="https://jichunhou.me/">Website ↗</a> &nbsp;·&nbsp;
 <a href="https://umeplab.github.io/">UMEP Lab ↗</a> &nbsp;·&nbsp;
-<a href="mailto:cji201@connect.hkust-gz.edu.cn">Email ↗</a>
+<a href="mailto:connect@jichunhou.me">Email ↗</a>
 </samp></p>
